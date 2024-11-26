@@ -1,19 +1,21 @@
 import "./App.css";
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddCourse from "./components/AddCourse";
-import EditCourse from "./components/EditCourse";
-import CourseList from "./components/CourseList";
-import SearchCourses from "./components/SearchCourses";
+import AddRecipe from "./components/AddRecipe";
+import EditRecipe from "./components/RecipeList";
+import RecipeList from "./components/RecipeList";
+import SearchRecipes from "./components/SearchRecipes";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CourseList />} />
-        <Route path="/add" element={<AddCourse />} />
-        <Route path="/edit/:id" element={<EditCourse />} />
-        <Route path="/search" element={<SearchCourses />} />
+        <Route path="/" element={<RecipeList />} />
+        
+        <Route path="/add" element={<AddRecipe />} />
+        
+        <Route path="/edit/:id" element={<EditRecipe />} />
+        
+        <Route path="/search" element={<SearchRecipes />} />
       </Routes>
     </Router>
   );
